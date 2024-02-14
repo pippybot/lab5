@@ -8,7 +8,7 @@ $email = $_REQUEST['email_field'];
 $hidden = $_REQUEST['hidden_field'];
 $comments = $_REQUEST['comment_field'];
 $gender = $_REQUEST['gender_field'];
-$available = $_REQUEST['availablity_field'];
+$available = $_REQUEST['availability_field'];
 $age = $_REQUEST['age_field'];
 
 ?>
@@ -43,15 +43,15 @@ $age = $_REQUEST['age_field'];
     <p><strong>Age:</strong> <?php echo htmlentities($age) ?></p>
   </div>
   <div class="box">
-  <h2>This section contains the information provided in the availibility section:</h2>
+  <h2>This section contains the information provided in the availability section:</h2>
   <h3>Days Selected as Available:</h3>
   <?php
     if (is_array($available)){
-      foreach ($available as $ckvalue) {
+      foreach ($availability as $ckvalue) {
         echo ('<p>' . htmlentities($ckvalue) . '</p>');
       }
     } else {
-      echo ('<p>' . htmlentities($available) . '</p>');
+      echo ('<p>' . htmlentities($availability) . '</p>');
     }
   ?>
   <h3>Comments:</h3>
